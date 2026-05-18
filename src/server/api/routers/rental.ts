@@ -1,12 +1,12 @@
 import { z } from "zod";
-import { eq, and, ne, or, lte, gte, desc } from "drizzle-orm";
+import { eq, and, or, lte, gte } from "drizzle-orm";
 
 import {
   createTRPCRouter,
   protectedProcedure,
   adminProcedure,
 } from "~/server/api/trpc";
-import { rentals, bikes, users } from "~/server/db/schema";
+import { rentals, bikes } from "~/server/db/schema";
 
 export const rentalRouter = createTRPCRouter({
   // ─── User: create a rental booking ────────────────────────────────

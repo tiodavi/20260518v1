@@ -1,10 +1,9 @@
 import { z } from "zod";
-import { eq, and, gte, lte, like, sql, ne } from "drizzle-orm";
+import { eq, and, gte, lte, like } from "drizzle-orm";
 
 import {
   createTRPCRouter,
   publicProcedure,
-  protectedProcedure,
   adminProcedure,
 } from "~/server/api/trpc";
 import { bikes } from "~/server/db/schema";

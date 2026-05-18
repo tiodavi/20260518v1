@@ -66,6 +66,7 @@ export const authConfig = {
       },
     }),
   ],
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-explicit-any
   adapter: DrizzleAdapter(db, {
     usersTable: users,
     accountsTable: accounts,
