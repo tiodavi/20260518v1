@@ -26,7 +26,7 @@ async function seed() {
       ON CONFLICT (email) DO NOTHING
     `;
     console.log("✅ Admin user created: admin@velocity.tw / admin123");
-  } catch (e) {
+  } catch {
     console.log("ℹ️  Admin user may already exist");
   }
 
@@ -40,7 +40,7 @@ async function seed() {
       ON CONFLICT (email) DO NOTHING
     `;
     console.log("✅ Demo user created: user@velocity.tw / user123");
-  } catch (e) {
+  } catch {
     console.log("ℹ️  Demo user may already exist");
   }
 
@@ -126,7 +126,7 @@ async function seed() {
         INSERT INTO "20260518v1_bike" (name, type, "pricePerHour", "pricePerDay", status, description, "createdAt")
         VALUES (${bike.name}, ${bike.type}::bike_type, ${bike.pricePerHour}, ${bike.pricePerDay}, ${bike.status}::bike_status, ${bike.description}, NOW())
       `;
-    } catch (e) {
+    } catch {
       // might already exist
     }
   }

@@ -66,13 +66,12 @@ export const authConfig = {
       },
     }),
   ],
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-explicit-any
   adapter: DrizzleAdapter(db, {
     usersTable: users,
     accountsTable: accounts,
     sessionsTable: sessions,
     verificationTokensTable: verificationTokens,
-  }) as any,
+  }) as unknown as NonNullable<NextAuthConfig["adapter"]>,
   session: {
     strategy: "jwt",
   },

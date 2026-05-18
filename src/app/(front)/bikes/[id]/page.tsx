@@ -1,6 +1,6 @@
 "use client";
 
-import { useParams, useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { api } from "~/trpc/react";
@@ -25,7 +25,6 @@ const statusBadge: Record<string, string> = {
 
 export default function BikeDetailPage() {
   const params = useParams();
-  const router = useRouter();
   const bikeId = Number(params.id);
 
   const { data: bike, isLoading } = api.bike.getById.useQuery({ id: bikeId });

@@ -228,7 +228,7 @@ export default function AdminBikesPage() {
           </table>
         </div>
 
-        {bikes && bikes.length === 0 && (
+        {bikes?.length === 0 && (
           <div className="py-16 text-center">
             <div className="mb-3 text-4xl">🚲</div>
             <p className="text-[#94a3b8]">尚未新增任何車輛</p>

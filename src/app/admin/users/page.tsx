@@ -82,7 +82,7 @@ export default function AdminUsersPage() {
           </table>
         </div>
 
-        {users && users.length === 0 && (
+        {users?.length === 0 && (
           <div className="py-16 text-center">
             <div className="mb-3 text-4xl">👥</div>
             <p className="text-[#94a3b8]">目前沒有註冊用戶</p>

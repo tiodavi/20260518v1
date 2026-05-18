@@ -150,7 +150,7 @@ export default function AdminOrdersPage() {
           </table>
         </div>
 
-        {rentals && rentals.length === 0 && (
+        {rentals?.length === 0 && (
           <div className="py-16 text-center">
             <div className="mb-3 text-4xl">📋</div>
             <p className="text-[#94a3b8]">目前沒有任何訂單</p>
